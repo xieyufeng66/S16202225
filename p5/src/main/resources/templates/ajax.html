@@ -1,0 +1,25 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <h1 id="msg"></h1>
+   <input type="button" id="btn" value="change text">
+   <input type="text" id="math">
+   <script type="text/javascript" th:src="@{webjars/jquery/3.0.0/jquery.min.js}"></script>
+   <script type="text/javascript">
+     $(document).ready(function (){
+    	
+     $("#btn").click(function (){
+    	  var id =$("#math").val();
+    	  alert(id);
+    			$.ajax({
+    		        url: "/task/"+id
+    		    }).then(function(data) {
+    		    	$("#msg").text(data.description);
+    		    });
+     }); 
+     });
+   </script>
+</html>
