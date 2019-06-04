@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.text {
+	color: white;
+}
+
+.btn {
+	width: 100px;
+	height: 45px;
+	border: 1px solid green;
+	color: green;
+}
+
+#main {
+	color: green;
+	margin-left: 20px;
+	background: #BOEOE6;
+}

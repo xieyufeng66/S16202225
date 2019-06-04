@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Aone Platform</title>
+<link rel="stylesheet"
+	th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	<div class="sidebar">
+		<ol>
+			<li th:each="task : ${tasks}" th:text="${task}"></li>
+		</ol>
+	</div>
+	
+	<div class="main">
+		<table>
+			<tr>
+				<td>#</td>
+				<td th:text="周次"></td>
+				<td th:text="课程内容"></td>
+				<td th:text="上课地点"></td>
+				<td th:text="上课时间"></td>
+			</tr>
+			<tr th:each="list ,iterStat :${listT}">
+			<td th:text="${list}"></td>
+				<td th:text="课程内容"></td>
+				<td th:text="上课地点"></td>
+				<td th:text="上课时间"></td>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript"
+		th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
